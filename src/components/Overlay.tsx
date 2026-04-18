@@ -36,11 +36,11 @@ export default function Overlay() {
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
           className="px-4"
         >
-          <h1 className="text-5xl sm:text-6xl md:text-9xl font-black tracking-tighter mb-4 md:mb-6 hover:scale-105 transition-transform duration-700 leading-none">
+          <h1 className="text-4xl sm:text-5xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 md:mb-6 hover:scale-105 transition-transform duration-700 leading-none">
             CREATIVE<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-500 via-white to-zinc-500">DEVELOPER</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-2xl text-white/50 font-light max-w-xl mx-auto">
+          <p className="text-sm sm:text-base md:text-xl lg:text-2xl text-white/50 font-light max-w-xl mx-auto">
             Crafting immersive digital experiences through code and motion.
           </p>
         </motion.div>
@@ -49,15 +49,15 @@ export default function Overlay() {
       {/* Section 2: 30% scroll */}
       <motion.div 
         style={{ opacity: opacity2, y: y2 }}
-        className="fixed top-0 left-0 w-full h-screen flex flex-col items-start justify-center p-4 md:p-8 md:pl-32"
+        className="fixed top-0 left-0 w-full h-screen flex flex-col items-center md:items-start justify-center p-4 md:p-8 md:pl-32"
       >
-        <div className="p-6 md:p-12 glass rounded-3xl border border-white/10 relative overflow-hidden backdrop-blur-2xl w-full max-w-[90%] md:max-w-none md:w-auto">
+        <div className="text-center md:text-left p-6 md:p-12 glass rounded-3xl border border-white/10 relative overflow-hidden backdrop-blur-2xl w-full max-w-[90%] md:max-w-none md:w-auto">
           <div className="absolute top-0 right-0 w-32 md:w-64 h-32 md:h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold max-w-2xl leading-tight relative z-10">
-            I engineer digital <br />
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight relative z-10">
+            I engineer digital <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-400">masterpieces.</span>
           </h2>
-          <p className="mt-4 md:mt-6 text-base md:text-xl text-white/60 max-w-md font-light">
+          <p className="mt-4 md:mt-6 mx-auto md:mx-0 text-sm sm:text-base md:text-xl text-white/60 max-w-md font-light">
             Merging logic and aesthetics to create seamless user journeys that captivate and engage.
           </p>
         </div>
@@ -66,15 +66,15 @@ export default function Overlay() {
       {/* Section 3: 60% scroll */}
       <motion.div 
         style={{ opacity: opacity3, y: y3 }}
-        className="fixed top-0 left-0 w-full h-screen flex flex-col items-end justify-center p-4 md:p-8 md:pr-32 text-right"
+        className="fixed top-0 left-0 w-full h-screen flex flex-col items-center md:items-end justify-center p-4 md:p-8 md:pr-32 text-center md:text-right"
       >
-         <div className="p-6 md:p-12 glass rounded-3xl border border-white/10 relative overflow-hidden backdrop-blur-2xl text-left bg-black/40 w-full max-w-[90%] md:max-w-none md:w-auto">
+         <div className="p-6 md:p-12 glass rounded-3xl border border-white/10 relative overflow-hidden backdrop-blur-2xl text-center md:text-left bg-black/40 w-full max-w-[90%] md:max-w-none md:w-auto">
           <div className="absolute bottom-0 left-0 w-32 md:w-64 h-32 md:h-64 bg-emerald-500/10 rounded-full blur-3xl"></div>
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold max-w-2xl leading-tight relative z-10">
-            Bridging the gap between <br />
+          <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold max-w-2xl leading-tight relative z-10">
+            Bridging the gap between <br className="hidden sm:block" />
             <span className="text-white/40 italic">vision and reality.</span>
           </h2>
-          <p className="mt-4 md:mt-6 text-base md:text-xl text-white/60 max-w-md font-light ml-auto">
+          <p className="mt-4 md:mt-6 mx-auto md:ml-auto md:mr-0 text-sm sm:text-base md:text-xl text-white/60 max-w-md font-light">
             From concept to deployment, ensuring every pixel and interaction feels just right.
           </p>
         </div>

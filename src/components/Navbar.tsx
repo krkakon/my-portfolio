@@ -15,14 +15,14 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-      className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-4 md:px-8 py-3 md:py-4 rounded-full glass border border-white/5 bg-black/20 w-[95%] md:w-[90%] max-w-3xl backdrop-blur-xl"
+      className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-50 flex items-center justify-between px-3 sm:px-4 md:px-8 py-3 md:py-4 rounded-full glass border border-white/5 bg-black/20 w-[95%] md:w-[90%] max-w-3xl backdrop-blur-xl"
     >
-      <Link href="/" className="font-bold text-base md:text-lg tracking-tight text-white mr-auto flex gap-2 items-center">
-        <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse hidden sm:block"></div>
-        Kakon Roy<span className="text-white/30 hidden sm:inline">.</span>
+      <Link href="/" className="font-bold text-[13px] sm:text-base md:text-lg tracking-tight text-white mr-auto flex gap-1.5 sm:gap-2 items-center">
+        <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+        Kakon Roy<span className="text-white/30">.</span>
       </Link>
       
-      <ul className="flex items-center gap-4 md:gap-8 text-[11px] md:text-sm font-medium text-white/60">
+      <ul className="flex items-center gap-2.5 sm:gap-4 md:gap-8 text-[10px] sm:text-[11px] md:text-sm font-medium text-white/60">
         <li>
           <Link href="/overview" className={`transition-colors cursor-pointer block ${isActive('/overview') ? 'text-white' : 'hover:text-white'}`}>
             Overview
@@ -39,7 +39,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link href="/contact" className="px-3 md:px-4 py-2 bg-white text-black rounded-full hover:bg-white/90 transition-colors cursor-pointer text-[9px] md:text-xs font-bold uppercase tracking-wider block">
+          <Link href="/contact" className="px-2.5 sm:px-3 md:px-4 py-1.5 sm:py-2 bg-white text-black rounded-full hover:bg-white/90 transition-colors cursor-pointer text-[8.5px] sm:text-[9px] md:text-xs font-bold uppercase tracking-wider block">
             Let's Talk
           </Link>
         </li>
