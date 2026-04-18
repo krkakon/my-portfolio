@@ -47,15 +47,23 @@ export default function ScrollyCanvas() {
     }
   });
 
-  // Also render first frame when images load initially
+  // Also render current frame when images load initially or component remounts
   useEffect(() => {
     if (images.length > 0 && canvasRef.current) {
       const ctx = canvasRef.current.getContext("2d");
-      const firstImg = images[0];
-      if (ctx && firstImg) {
-        firstImg.onload = () => {
-          if (canvasRef.current) renderToCanvas(ctx, firstImg, canvasRef.current);
-        };
+      if (!ctx) return;
+
+      const currentIndex = Math.max(0, Math.min(Math.floor(frameIndex.get()), images.length - 1));
+      const targetImg = images[currentIndex];
+      
+      if (targetImg) {
+        if (targetImg.complete && targetImg.naturalHeight !== 0) {
+          renderToCanvas(ctx, targetImg, canvasRef.current);
+        } else {
+          targetImg.onload = () => {
+            if (canvasRef.current) renderToCanvas(ctx, targetImg, canvasRef.current);
+          };
+        }
       }
     }
   }, [images]);
